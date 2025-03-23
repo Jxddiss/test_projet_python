@@ -3,7 +3,7 @@ import requests
 BASE_URL = "http://localhost:5000/books"
 
 def print_response(response):
-    print(f"\n[Statut {response.status_code}]\n")
+    print(f"[Statut {response.status_code}]\n")
     try:
         print(response.json())
     except:
