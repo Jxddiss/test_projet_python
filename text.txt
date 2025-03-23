@@ -1,0 +1,1 @@
+Ce fichier text sert a forcer le code a ne pas utiliser la cache (standardisation)

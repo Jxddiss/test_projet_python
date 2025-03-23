@@ -76,7 +76,7 @@ objectif: |
       - chemin: src/utils/json_manager.py
       - chemin: src/app.py
       - chemin: resources/books.json
-      - chemin: README.md
+      - chemin: text.txt
     cmd_compil: "/usercode/run"
 
 rétroactions:
