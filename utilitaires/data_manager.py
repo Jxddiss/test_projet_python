@@ -1,7 +1,6 @@
 import json
 import os
-# +VISIBLE
-# Chemin du fichier JSON
+
 BOOKS_FILE = 'resources/data.json'
 
 def load_books() -> list:
@@ -23,4 +22,3 @@ def save_books( books: list) -> None:
     with open(BOOKS_FILE, 'w', encoding='utf-8') as f:
         json.dump(books, f, indent=2, ensure_ascii=False)
     # -TODO
-# -VISIBLE
