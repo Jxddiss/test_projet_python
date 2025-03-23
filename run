@@ -1,11 +1,11 @@
 #!/bin/bash
 
-python /usercode/app.py > /dev/null 2>&1 &
+python /usercode/src/app.py > /dev/null 2>&1 &
 API_PID=$!
 
 sleep 1
 
-python /usercode/client.py &
+python /usercode/src/client.py &
 CLIENT_PID=$!
 
 wait $CLIENT_PID
