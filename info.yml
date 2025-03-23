@@ -77,7 +77,7 @@ objectif: |
       - chemin: src/app.py
       - chemin: resources/books.json
       - chemin: README.md
-    cmd_exec: "python -V"
+    cmd_exec: "/usercode/run"
 
 rétroactions:
   positive: Bravo !
