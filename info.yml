@@ -73,8 +73,8 @@ objectif: |
   python:
     image: "git.dti.crosemont.quebec:5050/session-intensive/equipe-compilation/compilebox/flask:latest"
     canevas:
-      - chemin: src/app.py
       - chemin: src/utils/json_manager.py
+      - chemin: src/app.py
       - chemin: resources/books.json
       - chemin: text.txt
     cmd_compil: "/usercode/run"
