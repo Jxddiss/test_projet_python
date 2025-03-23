@@ -3,11 +3,13 @@
 python3 /usercode/src/app.py > /dev/null 2>&1 &
 API_PID=$!
 
-sleep 1
+sleep 0.5
 
 python3 /usercode/src/client.py
-CLIENT_PID=$!
+CLIENT_EXIT=$?
 
-wait $CLIENT_PID
+# Nettoyer
+kill $API_PID 2>/dev/null
+wait $API_PID 2>/dev/null 
 
-kill $API_PID
+exit $CLIENT_EXIT 
