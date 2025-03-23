@@ -5,7 +5,7 @@ API_PID=$!
 
 sleep 1
 
-python3 /usercode/src/client.py &
+python3 /usercode/src/client.py
 CLIENT_PID=$!
 
 wait $CLIENT_PID
