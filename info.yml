@@ -77,7 +77,8 @@ objectif: |
       - chemin: src/app.py
       - chemin: resources/books.json
       - chemin: README.md
-    cmd_compil: "/usercode/run"
+    cmd_compil: " "
+    cmd_exec: "/usercode/run"
 
 rétroactions:
   positive: Bravo !
