@@ -1,8 +1,7 @@
-import json
-import os
-
 BOOKS_FILE = '/usercode/resources/books.json'
 # +VISIBLE
+import json
+import os
 
 def load_books() -> list:
     """Charge les livres depuis le fichier JSON"""

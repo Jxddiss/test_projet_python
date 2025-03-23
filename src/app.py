@@ -1,10 +1,11 @@
+
+# +VISIBLE
 from flask import Flask, jsonify, request, abort
 from utils.json_manager import load_books, save_books
 
 
 app = Flask(__name__)
 
-# +VISIBLE
 @app.route('/books', methods=['GET'])
 def get_books():
     """Récupère tous les livres"""
