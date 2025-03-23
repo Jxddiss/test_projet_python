@@ -1,0 +1,79 @@
+- nom: Création et affichage d'un livre
+  entrée: |
+    3
+    Dune
+    Frank Herbert
+    1965
+    1
+    6
+  sortie: |
+    [Statut 201]
+
+    {'author': 'Frank Herbert', 'id': 4, 'title': 'Dune', 'year': 1965}
+    --------------------------------------------------
+    [Statut 200]
+
+    [{'author': 'Antoine de Saint-Exupéry', 'id': 1, 'title': 'Le Petit Prince', 'year': 1943}, {'author': 'George Orwell', 'id': 2, 'title': '1984', 'year': 1949}, {'author': 'F. Scott Fitzgerald', 'id': 3, 'title': 'The Great Gatsby', 'year': 1925}, {'author': 'Frank Herbert', 'id': 4, 'title': 'Dune', 'year': 1965}]
+    --------------------------------------------------
+    Au revoir!
+
+- nom: Récupération d'un livre existant
+  entrée: |
+    2
+    2
+    6
+  sortie: |
+    [Statut 200]
+
+    {'author': 'George Orwell', 'id': 2, 'title': '1984', 'year': 1949}
+    --------------------------------------------------
+    Au revoir!
+
+- nom: Mise à jour partielle d'un livre
+  entrée: |
+    4
+    3
+
+    F. Scott Fitzgerald
+    1922
+    1
+    6
+  sortie: |
+    [Statut 200]
+
+    {'author': 'F. Scott Fitzgerald', 'id': 3, 'title': 'The Great Gatsby', 'year': 1922}
+    --------------------------------------------------
+    [Statut 200]
+
+    [{'author': 'Antoine de Saint-Exupéry', 'id': 1, 'title': 'Le Petit Prince', 'year': 1943}, {'author': 'George Orwell', 'id': 2, 'title': '1984', 'year': 1949}, {'author': 'F. Scott Fitzgerald', 'id': 3, 'title': 'The Great Gatsby', 'year': 1922}]
+    --------------------------------------------------
+    Au revoir!
+
+- nom: Suppression d'un livre
+  entrée: |
+    5
+    3
+    1
+    6
+  sortie: |
+    [Statut 200]
+
+    {'message': 'Livre supprimé avec succès'}
+    --------------------------------------------------
+    [Statut 200]
+
+    [{'author': 'Antoine de Saint-Exupéry', 'id': 1, 'title': 'Le Petit Prince', 'year': 1943}, {'author': 'George Orwell', 'id': 2, 'title': '1984', 'year': 1949}]
+    --------------------------------------------------
+    Au revoir!
+
+- nom: Tentative de récupération livre inexistant
+  entrée: |
+    2
+    999
+    6
+  sortie: |
+    [Statut 404]
+
+    {'error': 'Livre non trouvé'}
+    --------------------------------------------------
+    Au revoir!

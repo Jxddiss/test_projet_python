@@ -1,0 +1,13 @@
+#!/bin/bash
+
+python /usercode/app.py > /dev/null 2>&1 &
+API_PID=$!
+
+sleep 1
+
+python /usercode/client.py &
+CLIENT_PID=$!
+
+wait $CLIENT_PID
+
+kill $API_PID

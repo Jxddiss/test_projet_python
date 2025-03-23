@@ -1,0 +1,87 @@
+type: prog
+
+titre: API REST - Gestion de livres
+
+niveau: défi
+
+objectif: |
+  Implémenter les routes manquantes d'une API Flask
+
+énoncé: |
+
+  ## Contexte
+  Vous avez reçu un projet en cours de développement pour une API REST de gestion de livres. 
+  L'API permet de gérer une liste de livres en utilisant les méthodes HTTP standards.
+
+  Vous avez déjà un fichier `app.py` qui contient les routes de base pour la gestion des livres.
+  Vous devez completer ces routes pour ajouter les fonctionnalités manquantes.
+
+  Vous devrez aussi modifié le fichier `json_manager.py` pour ajouter les méthodes de manipulation de fichier JSON.
+
+  ---
+
+  ## Fonctionnalités Requises
+
+  ### 1. `GET /books/<id>`
+  - Retourne le livre correspondant à l'ID
+  - Si non trouvé : `404 Not Found` + message d'erreur JSON
+
+  ### 2. `POST /books`
+  - Ajoute un nouveau livre avec génération d'ID
+  - Valide la présence de `title`, `author`, `year`
+  - Retourne `400 Bad Request` si données invalides
+  - Retourne le livre créé avec `201 Created`
+
+  ### 3. `PUT /books/<id>`
+  - Met à jour partiellement un livre existant
+  - Gère les erreurs (ID inexistant, données non JSON)
+  - Retourne le livre modifié
+
+  ### 4. `DELETE /books/<id>`
+  - Supprime le livre et confirme l'action
+  - Retourne `404` si l'ID n'existe pas
+
+  ---
+
+  ## Exemples de Requêtes/Réponses
+
+  | Méthode | Endpoint          | Requête (Body)                          | Réponse Attendue (Statut + JSON)        |
+  |---------|-------------------|-----------------------------------------|------------------------------------------|
+  | POST    | `/books`          | `{"title": "Dune", "author": "F. Herbert", "year": 1965}` | `201` + livre avec ID |
+  | GET     | `/books/99`       | -                                       | `404` + `{"error": "Livre non trouvé"}`  |
+  | PUT     | `/books/1`        | `{"year": 2023}`                        | `200` + livre modifié                    |
+  | DELETE  | `/books/1`        | -                                       | `200` + `{"message": "Livre supprimé"}`  |
+
+  ---
+
+  ## Contraintes Techniques
+  - Persistance : Les modifications doivent être sauvegardées dans `books.json`
+  - Gestion d'erreurs : 
+    - Content-Type non-JSON → `400 Bad Request`
+    - Champs manquants (POST) → `400` + détails
+  - Codes HTTP : Utiliser les statuts appropriés
+
+  ---
+
+  ## Évaluation
+  - **Critères clés** :
+    - Respect des standards REST
+    - Bonne gestion du fichier JSON
+    - Validation des entrées
+
+ébauches:
+  python:
+    image: "git.dti.crosemont.quebec:5050/session-intensive/equipe-compilation/compilebox/remotecompiler:latest"
+    canevas:
+      - chemin: src/app.py
+      - chemin: resources/books.json
+    cmd_exec: "/usercode/run"
+
+rétroactions:
+  positive: Bravo !
+  négative: Important de faire attention à la gestion des erreurs. et vérifier la syntaxe de votre code Python.
+
+tests: !include tests.yml
+
+auteur: Nicholson Rainville Jacques
+licence: 2025 CC-BY-SA
