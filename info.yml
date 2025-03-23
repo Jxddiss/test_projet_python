@@ -16,7 +16,7 @@ objectif: |
   Vous avez déjà un fichier `app.py` qui contient les routes de base pour la gestion des livres.
   Vous devez completer ces routes pour ajouter les fonctionnalités manquantes.
 
-  Vous devrez aussi modifié le fichier `json_manager.py` pour ajouter les méthodes de manipulation de fichier JSON.
+  Vous devrez aussi modifié le fichier `json.py` pour ajouter les méthodes de manipulation de fichier JSON.
 
   ---
 
@@ -73,7 +73,7 @@ objectif: |
   python:
     image: "git.dti.crosemont.quebec:5050/session-intensive/equipe-compilation/compilebox/remotecompiler:latest"
     canevas:
-      - chemin: src/utils/jsonmanager.py
+      - chemin: src/utils/json.py
       - chemin: src/app.py
       - chemin: resources/books.json
     cmd_exec: "/usercode/run"
