@@ -73,7 +73,6 @@ objectif: |
   python:
     image: "git.dti.crosemont.quebec:5050/session-intensive/equipe-compilation/compilebox/remotecompiler:latest"
     canevas:
-      - chemin: utils/json_manager.py
       - chemin: src/app.py
       - chemin: resources/books.json
     cmd_exec: "/usercode/run"
