@@ -36,7 +36,8 @@
 
     F. Scott Fitzgerald
     1922
-    1
+    2
+    3
     6
   sortie: |
     [Statut 200]
@@ -45,7 +46,7 @@
     --------------------------------------------------
     [Statut 200]
 
-    [{'author': 'Antoine de Saint-Exupéry', 'id': 1, 'title': 'Le Petit Prince', 'year': 1943}, {'author': 'George Orwell', 'id': 2, 'title': '1984', 'year': 1949}, {'author': 'F. Scott Fitzgerald', 'id': 3, 'title': 'The Great Gatsby', 'year': 1922}, {'author': 'Frank Herbert', 'id': 4, 'title': 'Dune', 'year': 1965}]
+    {'author': 'F. Scott Fitzgerald', 'id': 3, 'title': 'The Great Gatsby', 'year': 1922}
     --------------------------------------------------
     Au revoir!
 
@@ -53,16 +54,17 @@
   entrée: |
     5
     3
-    1
+    2
+    3
     6
   sortie: |
     [Statut 200]
 
     {'message': 'Livre supprimé avec succès'}
     --------------------------------------------------
-    [Statut 200]
+    [Statut 404]
 
-    [{'author': 'Antoine de Saint-Exupéry', 'id': 1, 'title': 'Le Petit Prince', 'year': 1943}, {'author': 'George Orwell', 'id': 2, 'title': '1984', 'year': 1949}, {'author': 'Frank Herbert', 'id': 4, 'title': 'Dune', 'year': 1965}]
+    {'error': 'Livre non trouvé'}
     --------------------------------------------------
     Au revoir!
 
