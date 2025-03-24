@@ -1,4 +1,4 @@
-- nom: Création et affichage d'un livre
+- nom: Création et affichage d'un livre - POST /books et GET /books
   entrée: |
     3
     Dune
@@ -17,7 +17,7 @@
     --------------------------------------------------
     Au revoir!
 
-- nom: Récupération d'un livre existant
+- nom: Récupération d'un livre existant - GET /books/:id
   entrée: |
     2
     2
@@ -29,7 +29,7 @@
     --------------------------------------------------
     Au revoir!
 
-- nom: Mise à jour partielle d'un livre
+- nom: Mise à jour partielle d'un livre - PUT /books/:id_a_modifier et GET /books/:id_modifié
   entrée: |
     4
     3
@@ -50,7 +50,7 @@
     --------------------------------------------------
     Au revoir!
 
-- nom: Suppression d'un livre
+- nom: Suppression d'un livre - DELETE /books/:id et GET /books/:id_a_supprimer
   entrée: |
     5
     3
@@ -68,7 +68,7 @@
     --------------------------------------------------
     Au revoir!
 
-- nom: Tentative de récupération livre inexistant
+- nom: Tentative de récupération livre inexistant - GET /books/:id_non_existant
   entrée: |
     2
     999
