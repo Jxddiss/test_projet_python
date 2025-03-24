@@ -76,8 +76,8 @@ objectif: |
       - chemin: src/utils/json_manager.py
       - chemin: src/app.py
       - chemin: resources/books.json
-      - chemin: text.txt
     cmd_compil: "/usercode/run"
+    cmd_exec: "true"
 
 rétroactions:
   positive: Bravo !
