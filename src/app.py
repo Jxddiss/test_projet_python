@@ -22,7 +22,7 @@ def get_book(id):
     book = next((b for b in books if b['id'] == id), None)
     
     if not book:
-        return jsonify({'message': 'Livre non trouvé'}), 404
+        return jsonify({'message': 'Livre introuvable'}), 404
     return jsonify(book)
     # -TODO
 
